@@ -1,12 +1,10 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-import uvicorn
+from app.helloworld import HelloWorld
+import logging
 
 app = FastAPI()
-
-class MessageResponse(BaseModel):
-    message: str
-
+logger = logging.getLogger("main")
 @app.get("/helloWorld")
 async def root():
-    return MessageResponse(message="Hello World!!!")
+    logger.info("request in")
+    return HelloWorld.getMessage()
