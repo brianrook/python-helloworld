@@ -4,7 +4,9 @@ import logging
 
 app = FastAPI()
 logger = logging.getLogger("main")
+
+
 @app.get("/helloWorld")
 async def root():
-    logger.info("request in")
+    logger.info("http request in")
     return HelloWorld.getMessage()

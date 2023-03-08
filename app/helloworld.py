@@ -1,9 +1,13 @@
 import logging
 
 from pydantic import BaseModel
+
 logger = logging.getLogger("helloworld")
+
+
 class MessageResponse(BaseModel):
     message: str
+
 
 class HelloWorld:
 
