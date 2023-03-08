@@ -8,5 +8,4 @@ COPY ./logging.conf ${LAMBDA_TASK_ROOT}
 COPY ./aws.py ${LAMBDA_TASK_ROOT}
 COPY ./app ${LAMBDA_TASK_ROOT}
 
-#CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--log-config", "logging.conf"]
 CMD [ "aws.handler" ]
