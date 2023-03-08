@@ -6,6 +6,6 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt --target "${LAMBDA_
 
 COPY ./logging.conf ${LAMBDA_TASK_ROOT}
 COPY ./aws.py ${LAMBDA_TASK_ROOT}
-COPY ./app ${LAMBDA_TASK_ROOT}
+ADD ./app app
 
 CMD [ "aws.handler" ]
