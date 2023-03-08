@@ -4,7 +4,7 @@ WORKDIR ${LAMBDA_TASK_ROOT}
 
 COPY ./requirements.txt .
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
 COPY ./app .
 COPY ./logging.conf .
