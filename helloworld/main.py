@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.helloworld import HelloWorld
+from helloworld.helloworld import HelloWorld
 import logging
 
 app = FastAPI()
